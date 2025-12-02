@@ -27,18 +27,18 @@ React • JavaScript • HTML • CSS
 ---
 
 ## ⚙ Installation
-npm install
+- npm install
 
 ---
 
 ### Required packages
-npm install react-router-dom
-npm install sweetalert2
-npm install @monaco-editor/react
+- npm install react-router-dom
+- npm install sweetalert2
+- npm install @monaco-editor/react
 
 ---
 
 ## ▶ Run the Project
-npm run dev
+- npm run dev
 
 The project will open at **http://localhost:3000/**
