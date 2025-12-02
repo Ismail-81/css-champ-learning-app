@@ -1,0 +1,70 @@
+{/*<Sandpack 
+                    template='static'
+                    theme={nightOwl}
+                    options={{
+                        showLineNumbers: true,
+                        readOnly: false,
+                        showTabs: true,
+                        showInlineErrors:true
+                    }}
+                    files={files}
+                    onChange={setUpdatedCode}
+                    //  onChange={(newCode, filePath) => {
+                    //     if (filePath === "/styles.css") {
+                    //     setUserCss(newCode);                        
+                    //     }
+                    // }}
+                ></Sandpack>*/}
+
+
+
+
+
+
+                 // const normalize = (css) => {
+    //     return css.toLowerCase().split(";").map(prop => prop.trim())
+    //     .filter(Boolean).sort().join(";");
+    // }
+
+    // const chkAns = () => {
+
+
+    //    if(normalize(userCss) === normalize(answerCss)){
+    //         alert("You did it :)!");
+    //    } else {
+    //         alert("Try Again :)!");
+    //    }
+    // };
+
+
+
+
+
+
+    const normalize = (css) => {
+  return css
+    .toLowerCase()
+    .split(";")
+    .map(prop => prop.trim())
+    .filter(Boolean)
+    .sort()
+    .join(";");
+}
+
+
+
+
+const chkAns = () => {
+  // First, check if {} are present
+  if (!userCss.includes("{") || !userCss.includes("}")) {
+    alert("Try Again :)! (Missing curly brackets)");
+    return;
+  }
+
+  // Then compare normalized CSS
+  if (normalize(userCss) === normalize(answerCss)) {
+    alert("You did it :)!");
+  } else {
+    alert("Try Again :)!");
+  }
+}
